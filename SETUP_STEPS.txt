@@ -1,0 +1,48 @@
+HOOP SESSION TRACKER - EXACT SETUP STEPS
+
+1. In VS Code, choose Terminal > New Terminal.
+
+2. Move to C:\RN:
+   cd C:\RN
+
+3. Create the fresh React Native project:
+   npx.cmd @react-native-community/cli@latest init HoopSessionTracker
+
+4. Enter the project:
+   cd HoopSessionTracker
+
+5. Install AsyncStorage:
+   npm.cmd install @react-native-async-storage/async-storage
+
+6. Copy App.tsx from this package and replace the generated App.tsx in:
+   C:\RN\HoopSessionTracker
+
+7. Copy README.md, Written_Summary.md, and VIDEO_PRESENTATION_SCRIPT.md into:
+   C:\RN\HoopSessionTracker
+
+8. Start the Android Emulator from Android Studio.
+
+9. In VS Code Terminal 1, start Metro:
+   npm.cmd start -- --port 8082
+
+10. Create Terminal 2 and run:
+    npm.cmd run android -- --port 8082
+
+11. Test add, edit, delete, category filters, status filters, validation, and persistence.
+
+12. Create a screenshots folder in the project. Add at least three emulator screenshots.
+
+13. Create the GitHub repository with this exact name:
+    CMPS460-Module7-QuintonAlexandre
+
+14. In the project terminal, run these commands separately:
+    git init
+    git add .
+    git commit -m "Module 7 Mobile Application"
+    git branch -M main
+    git remote add origin https://github.com/Quinton30/CMPS460-Module7-QuintonAlexandre.git
+    git push -u origin main
+
+15. Record the 5-8 minute video using VIDEO_PRESENTATION_SCRIPT.md.
+
+16. Submit the GitHub URL, video link/file, and Written_Summary.md through the LMS.

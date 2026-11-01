@@ -1,0 +1,8 @@
+# Module 7 Written Summary
+
+My Module 7 application is called Hoop Session Tracker. I created it as an original basketball fitness organizer because basketball is an activity that I regularly participate in. The application allows a user to add training sessions and save the session title, date, duration, category, status, and optional notes. The three categories are Shooting, Conditioning, and Strength. Users can view all saved sessions in a FlatList, edit a session, delete a session, and filter the collection by category or by Planned and Completed status.
+
+I used React state to manage the form values, saved session collection, selected filters, validation message, and record currently being edited. AsyncStorage provides persistence between application sessions. When the application starts, useEffect retrieves the saved JSON string with AsyncStorage.getItem(). JSON.parse() converts the stored string back into an array of typed basketball session objects. After loading is complete, another useEffect watches the sessions array. Whenever a record is created, updated, or deleted, JSON.stringify() converts the array into a string and AsyncStorage.setItem() saves it.
+
+One challenge was preventing the empty initial state from overwriting previously saved records before AsyncStorage finished loading. I resolved this by adding a storageLoaded state value. The save effect does not run until the first loading attempt finishes. I also added validation to reject an empty title, an invalid date, and a duration that is not a positive whole number. This project helped me understand how CRUD operations, state, filtering, validation, and persistent storage work together in a React Native application.
+
